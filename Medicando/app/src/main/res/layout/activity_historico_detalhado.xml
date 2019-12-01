@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.secundarias.HistoricoDetalhadoActivity">
+
+
+    <include
+        android:id="@+id/includeToolbarHistorico"
+        layout="@layout/toolbar_padrao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/detailNumeroPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Numero do Pedido"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeToolbarHistorico" />
+
+    <TextView
+        android:id="@+id/detailEntregaPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Entrega do Pedido"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailNumeroPedido" />
+
+    <TextView
+        android:id="@+id/detailFormaPagamentoPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Forma de Pagamento do Pedido"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailEntregaPedido" />
+
+    <TextView
+        android:id="@+id/detailTotalPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Total do Pedido"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailFormaPagamentoPedido" />
+
+    <ImageView
+        android:id="@+id/imageRemedioHistorico"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:elevation="1dp"
+        android:background="@drawable/background_image_resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTotalPedido"
+        app:srcCompat="@drawable/icone_medicamento_provisorio" />
+
+    <TextView
+        android:id="@+id/textNumeroPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="AMOXICILINA (30 comprimidos)"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/imageRemedioHistorico"
+        app:layout_constraintTop_toBottomOf="@+id/detailTotalPedido" />
+
+    <TextView
+        android:id="@+id/textStatusHistorico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="1 unidade"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRemedioHistorico"
+        app:layout_constraintTop_toBottomOf="@+id/textNumeroPedido" />
+
+    <TextView
+        android:id="@+id/textDataEntrega"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="R$ 49,90"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRemedioHistorico"
+        app:layout_constraintTop_toBottomOf="@+id/textStatusHistorico" />
+
+
+    <TextView
+        android:id="@+id/detailStatusEntrega"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Status da Entrega"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRemedioHistorico" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerStatusEntrega"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailStatusEntrega" />
+
+
+</android.support.constraint.ConstraintLayout>
